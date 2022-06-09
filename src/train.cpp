@@ -5,10 +5,10 @@ void Train::addCage(bool light) {
   Cage *cage = new Cage;
   cage->light = light;
   cage->prev = nullptr;
-  cage->next = nullptr;
-  if (first == nullptr) {
+  cage->next = cage->prev;
+  if (first) {
     first = cage;
-  } else if (first->next == nullptr) {
+  } else if (first->next) {
     first->next = cage;
     cage->prev = first;
     first->prev = cage;
