@@ -1,5 +1,6 @@
 // Copyright 2021 NNTU-CS
 #include "train.h"
+Train::Train() : countOp(0), first(nullptr) {}
 void Train::addCage(bool light) {
   Cage *cage = new Cage;
   cage->light = light;
